@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar'
+import PasswordInput from '@/components/PasswordInput'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardFooter, CardDescription } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -19,17 +20,15 @@ function Login() {
           <CardContent className='space-y-4'>
             <div className='space-y-2'>
               <Label>Email</Label>
-              <Input type="email" placeholder='Insira seu email'/>
+              <Input type="email" placeholder='Insira seu email' />
             </div>
-            <div className='space-y-2'>
-              <Label>Senha</Label>
-              <Input type="password" placeholder='Insira sua senha'/>
-            </div>
+            <PasswordInput />
+
 
             <Button type='submit' className='w-full'>Entrar</Button>
           </CardContent>
           <CardFooter>
-            <p className='text-sm text-center'>
+            <p className='text-sm text-center w-full'>
               Ainda não tem conta?{" "}
               <Link to="/registro" className='font-medium text-primary underline'>Criar uma conta</Link>
             </p>
